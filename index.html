@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuseelandreise</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 
 <body>
@@ -17,38 +19,47 @@
         Geprägt wird Auckland durch die 53 inaktiven Vulkanen, zwischen welchen sich die Großstadt erstreckt.Die Lage an geschützten Meeresbuchten trägt
         ebenfalls wesentlich zum Bild Aucklands bei, nicht zuletzt durch die zahlreichen Segelboote, die der Stadt den Beinamen City of Sails einbrachte. 
         (Quelle: <a href="https://de.wikipedia.org/wiki/Auckland">Wikipedia</a> )<br>
- <figure>
-        ![https://de.wikipedia.org/wiki/Auckland#/media/Datei:AucklandMontage24032011.jpg/to/img.png]
-        <figcaption> Die verschiedenen Facetten und Landschaften von Auckland (Quelle: <a href="https://de.wikipedia.org/wiki/Auckland#/media/Datei:AucklandMontage24032011.jpg">Wikimedia 2011</a>)</figcaption>
-    </figure>
+ <figure> <img src="images/landscape.jpg"></figure>
+        <figcaption> Die verschiedenen Facetten und Landschaften von Auckland </figcaption>
+    <a href="https://de.wikipedia.org/wiki/Auckland#/media/Datei:AucklandMontage24032011.jpg">Wikimedia</a><br>
 </body>
 
 </html>
         <p>
-    <h3>Geographische Lage<h3>
+    <h3>Geographische Lage</h3>
         Auckland befindet sich auf der 380 km langen und bis zu 80 km breiten nördlichen Landzunge der Nordinsel von Neuseeland. Das Stadtgebiet grenzt 
         im Norden an die Region Northland und im Süden an die Region Waikato an. Im Westen bildet die Tasmansee die natürliche Grenze und im Osten der 
         Pazifische Ozean, wobei die Inseln Great Barrier Island und die zwischen ihr und Auckland liegenden Inseln und das Seegebiet des Hauraki Gulf mit
         zum Stadtgebiet gehören. Das so 2010 neu gebildete Stadtgebiet umfasst eine Landfläche von 4938 km².
         (Quelle: <a href="https://de.wikipedia.org/wiki/Auckland">Wikipedia</a> )
+        
     </p>
+    <h4>Übersichtskarte</h4>
+    <div id="map" style="width: 90%;height: 600px; border: 1px solid silver;margin: auto"></div>
 
-    <figure>
-        ![https://de.wikipedia.org/wiki/Datei:Auckland_in_New_Zealand.svg/to/img.png]
-        <figcaption>Lage von Auckland in Neuseeland(Quelle: <a href="https://de.wikipedia.org/wiki/Datei:Auckland_in_New_Zealand.svg">Wikimedia 2011</a>)</figcaption>
-    </figure>
+    
     
     <h4>Quellen<h4>
         <ul>
         <li><a href="https://de.wikipedia.org/wiki/Auckland" >Wikipediaeintrag Auckland</a></li>
         <li><a href="https://www.newzealand.com/de/auckland/" >Neuseeland Tourismus</a></li>
-        
-<nav>
+        <li><a href="https://www.aucklandnz.com/visit" >Auckland Tourismus</a></li>
+    <nav>
     <a href="https://juba1508.github.io/nz">vorhergehende Etappe</a>
     <a href="https://manohog.github.io/nz">nächsten Etappe </a>
 
-<nav>
+    <nav>
+    <script>
+var map = L.map('map').setView([-36.833333, 174.8], 13);
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([-36.833333, 174.8]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
+    </script>
 </body>
 
 </html>
