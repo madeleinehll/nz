@@ -3,12 +3,15 @@ let stop_lng = 174.8;
 let zoom = 13;
 let title = 'Auckland'
 
-const STOPS = ["Rotorua","Auckland", "Christchurch"];
+const STOPS = ["Rotorua",{
+    title:"Auckland",
+    user: "madeleinehll",
+    lat: -36.833333,
+    lng: 174.8,
+    wikipedia: "https://de.wikipedia.org/wiki/Auckland"
+}, "Christchurch"];
 console.log(STOPS);
-console.log(STOPS[0]);
-console.log(STOPS[1]);
-console.log(STOPS[2]);
-console.log(STOPS.length);
+
 
 
 
