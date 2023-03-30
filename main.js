@@ -108,12 +108,7 @@ L.marker([stop_lat, stop_lng]).addTo(map)
     .openPopup();
 
 for(let stop of STOPS) {
-    console.log(stop);
-    console.log(stop.title);
-    console.log(stop.user);
-    console.log(stop.lat);
-    console.log(stop.lng);
-    console.log(stop.wikipedia);
+    //Marker erzeugen für den Stop
     L.marker([stop.lat, stop.lng]).addTo(map)
     .bindPopup(stop.title)
     .openPopup();
