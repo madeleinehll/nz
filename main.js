@@ -109,8 +109,13 @@ L.marker([stop_lat, stop_lng]).addTo(map)
 
 for(let stop of STOPS) {
     //Marker erzeugen für den Stop
-    L.marker([stop.lat, stop.lng]).addTo(map)
-    .bindPopup(stop.title)
-    .openPopup();
-
+    let marker = L.marker([stop.lat, stop.lng])
+    .addTo(map)
+    .bindPopup(`<h3>${stop.title}</h3>
+    <a href= "${stop.wikipedia}" >Wikipedia</a>
+    `);
+    if (stop.user == "madeleinehll") {
+        marker.openPopup();
+        console.log("Mein Marker:", stop);
+    }
 }
