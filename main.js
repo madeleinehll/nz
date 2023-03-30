@@ -114,4 +114,8 @@ for(let stop of STOPS) {
     console.log(stop.lat);
     console.log(stop.lng);
     console.log(stop.wikipedia);
+    L.marker([stop.lat, stop.lng]).addTo(map)
+    .bindPopup(stop.title)
+    .openPopup();
+
 }
