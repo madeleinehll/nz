@@ -106,10 +106,18 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([stop_lat, stop_lng]).addTo(map)
     .bindPopup(title)
     .openPopup();
+    L.control.scale(
+        {imperial:false, 
+        position: "bottomright",
+        maxWidth: 150,
+    }).addTo(map);
 
 for(let stop of STOPS) {
     //Marker erzeugen für den Stop
-    let marker = L.marker([stop.lat, stop.lng])
+    let marker = L.marker([stop.lat, stop.lng], {
+        opacity: 0.5,
+    
+    })
     .addTo(map)
     .bindPopup(`<h3>${stop.title}</h3>
     <a href= "${stop.wikipedia}" >Wikipedia</a>
