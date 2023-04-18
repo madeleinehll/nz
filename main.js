@@ -100,6 +100,7 @@ const STOPS = [
 let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
 
+
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
 let OpenTopoMap = L.tileLayer.provider('OpenTopoMap').addTo(map);
@@ -113,6 +114,23 @@ L.control.layers({
     "Transport": OPNVKarte,
     "Satellite": EsriWorldImagery,
 }).addTo(map);
+
+map.addControl(new L.Control.Fullscreen({
+    title: {
+        'false': 'View Fullscreen',
+        'true': 'Exit Fullscreen'
+    }
+}));
+map.isFullscreen();
+
+map.on('fullscreenchange', function () {
+    if (map.isFullscreen()) {
+        console.log('entered fullscreen');
+    } else {
+        console.log('exited fullscreen');
+    }
+});
+
 
 L.marker([stop_lat, stop_lng]).addTo(map)
     .bindPopup(title)
