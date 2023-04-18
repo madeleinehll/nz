@@ -101,10 +101,10 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom);
 
 
 let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
-let osm = L.tileLayer.provider ('OpenStreetMap.Mapnik').addTo(map);
-let OpenTopoMap = L.tileLayer.provider('OpenTopoMap') .addTo(map);
+let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+let OpenTopoMap = L.tileLayer.provider('OpenTopoMap').addTo(map);
 let OPNVKarte = L.tileLayer.provider('OPNVKarte').addTo(map);
-let EsriWorldImagery = L.tileLayer.provider('Esri.WorldImagery') .addTo(map);
+let EsriWorldImagery = L.tileLayer.provider('Esri.WorldImagery').addTo(map);
 
 L.control.layers({
     "Openstreetmap": osm,
@@ -127,7 +127,7 @@ L.control.scale(
 for (let stop of STOPS) {
     //Marker erzeugen für den Stop
     let marker = L.marker([stop.lat, stop.lng], {
-        opacity: 1, 
+        opacity: 1,
 
     })
         .addTo(map)
