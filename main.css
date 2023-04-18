@@ -32,6 +32,11 @@ main {
 } /*Formatierung des Hauptteils, grauer Rahmen*/
 
 
+figcaption {
+    text-align: left;
+    padding: 1.5em;
+}
+
 article {
     padding: 1em;
 } /*bestimmt den Innenabstand eines Elements zu seinem Rahmen, Von  einem großen "M"*/
