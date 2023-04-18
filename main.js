@@ -121,15 +121,6 @@ map.addControl(new L.Control.Fullscreen({
         'true': 'Exit Fullscreen'
     }
 }));
-map.isFullscreen();
-
-map.on('fullscreenchange', function () {
-    if (map.isFullscreen()) {
-        console.log('entered fullscreen');
-    } else {
-        console.log('exited fullscreen');
-    }
-});
 
 
 L.marker([stop_lat, stop_lng]).addTo(map)
