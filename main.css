@@ -1,12 +1,12 @@
 /* CSS-Stile für die Neuseelandreise */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
-
+/*importieren von Schriftart, nur einmal machen, seriöse Webseite eigentlich herunterladen und benennen*/
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Textart */
     background-color: #ffffff;
     max-width: 1280px;
-    margin: auto;
+    margin: auto; /* Zentrieren der Seite*/
 }
 
 header>img {
@@ -14,10 +14,10 @@ header>img {
 }
 
 header a img {
-    border-radius: 50%;
-    display: block;
-    margin: auto;
-    margin-top: -50px;
+    border-radius: 50%; /* User Bild rund */
+    display: block; /* immer in Blöcken bei html */
+    margin: auto; 
+    margin-top: -50px; /* hochsetzen des Bildes*/
 }
 
 main {
@@ -30,7 +30,7 @@ main {
 }
 
 article {
-    padding: 1em;
+    padding: 1em; /* 1em = 16 px, Proportional Schriften bearbeiten */
 }
 
 article p {
@@ -58,7 +58,7 @@ article figure>img {
 
 footer {
     text-align: center;
-    padding: 1em 2em 3em 2em;
+    padding: 1em 2em 3em 2em; /* oben, rechts, unten, links*/
 }
 
 footer nav {
@@ -74,8 +74,8 @@ header img,
 figure>img,
 #map {
     box-shadow:
-        0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        0 4px 8px 0 rgba(0, 0, 0, 0.2), /* Wert Rot,Grün,Blau,Transparenz*/
+        0 6px 20px 0 rgba(0, 0, 0, 0.2); /*Lage Shadow, Shadow Generator*/
 }
 
 @media screen and (max-width: 1280px) {
