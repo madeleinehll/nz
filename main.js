@@ -1,5 +1,5 @@
 
-var map = L.map('map').setView([-37.8575, 175.679722], 13);
+var map = L.map('map').setView([-36.833333,174.8], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -9,7 +9,7 @@ var circle = L.circle([-36.833333,174.8], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 500
+    radius: 200
 }).addTo(map);
 circle.bindPopup("<strong> Hier ist Auckland </strong>").openPopup();
 // var popup = L.popup()
