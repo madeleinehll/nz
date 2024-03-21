@@ -4,7 +4,7 @@
 /*importieren von Schriftart, nur einmal machen, seriöse Webseite eigentlich herunterladen und benennen*/
 body {
     font-family: 'Open Sans', sans-serif; /* Textart */
-    background-color: #ffffff;
+    background-color: #dedede;
     max-width: 1280px;
     margin: auto; /* Zentrieren der Seite*/
 }
