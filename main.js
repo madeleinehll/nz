@@ -17,6 +17,7 @@ let circle = L.circle([lat,lng], {
     fillOpacity: 0.5,
     radius: 200
 }).addTo(map);
+
 circle.bindPopup(`
      <strong> Hier ist Auckland </strong>
      <ul>
@@ -36,6 +37,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
+L.control.scale().addTo(map);
 /* comment
 */
 let absatz = "Hi" /*Variable definiert*/
