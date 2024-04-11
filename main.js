@@ -15,7 +15,13 @@ let circle = L.circle([lat,lng], {
     fillOpacity: 0.5,
     radius: 200
 }).addTo(map);
-circle.bindPopup("<strong> Hier ist Auckland </strong>").openPopup();
+circle.bindPopup(`
+     <strong> Hier ist Auckland </strong>
+     <ul>
+        <li>Breite: ${lat}</li>
+        <li>Länge: ${lng}</li>
+     </ul>
+`).openPopup();
 // let popup = L.popup()
 //    .setLatLng([-36.833333, 174.8])
 //   .setContent("Hier liegt das Hobbition-Filmset.")
