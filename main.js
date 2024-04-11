@@ -1,11 +1,14 @@
 
-let map = L.map('map').setView([-36.833333,174.8], 13);
+let lat = -36.833333;
+let lng = 174.8;
+
+let map = L.map('map').setView([lat,lng], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-let circle = L.circle([-36.833333,174.8], {
+let circle = L.circle([lat,lng], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
