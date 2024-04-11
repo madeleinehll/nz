@@ -11,6 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+/*
 let circle = L.circle([lat,lng], {
     color: 'red',
     fillColor: '#f03',
@@ -25,6 +26,7 @@ circle.bindPopup(`
         <li>Länge: ${lng.toFixed(2)}</li>
      </ul>
 `).openPopup();
+*/
 //.toFixed() = Nachkommastellen 
 
 let popup = L.popup();
@@ -62,4 +64,13 @@ let jsonPunkt = {
     "properties": {
       "name": "Auckland"
     }
-  }
+  };
+  L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
+    return `
+    <strong>${layer.feature.properties.name}</strong>
+    <ul>
+       <li>Breite: ${layer.feature.geometry.coordinates[1].toFixed(2)}</li> 
+       <li>Länge: ${layer.feature.geometry.coordinates[0].toFixed(2)}</li>
+    </ul>
+`;
+}).addTo(map);
