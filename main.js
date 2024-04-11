@@ -51,3 +51,15 @@ console.log(`
 <p> Nummer plus 1 = ${nummer+1}</p>
 <div id ="map"></div>`
 );
+
+
+let jsonPunkt = {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [lng, lat]
+    },
+    "properties": {
+      "name": "Auckland"
+    }
+  }
