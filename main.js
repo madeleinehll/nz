@@ -306,11 +306,14 @@ let jsondata = {
  ]
  };
   L.geoJSON(jsondata, {}).bindPopup(function (layer) {
+    console.log(layer.feature.properties)
     return `
     <strong>${layer.feature.properties.name}</strong>
     <ul>
        <li>Breite: ${layer.feature.geometry.coordinates[1].toFixed(2)}</li> 
        <li>Länge: ${layer.feature.geometry.coordinates[0].toFixed(2)}</li>
+       <li>User: https://${layer.feature.properties.user}.github.io/nz </li>
+       <li>Wikipedia: ${layer.feature.properties.wikipedia}</li>
     </ul>
 `;
 }).addTo(map);
