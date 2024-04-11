@@ -3,8 +3,10 @@ let lat = -36.833333;
 let lng = 174.8;
 let zoom= 13
 
-let map = L.map('map').setView([lat,lng], zoom);
-
+let map = L.map('map', {
+    center: [lat, lng],
+    zoom: zoom
+});
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -18,8 +20,8 @@ let circle = L.circle([lat,lng], {
 circle.bindPopup(`
      <strong> Hier ist Auckland </strong>
      <ul>
-        <li>Breite: ${lat.toFixed(1)}</li> 
-        <li>Länge: ${lng.toFixed(1)}</li>
+        <li>Breite: ${lat.toFixed(2)}</li> 
+        <li>Länge: ${lng.toFixed(2)}</li>
      </ul>
 `).openPopup();
 //.toFixed() = Nachkommastellen 
