@@ -37,7 +37,10 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
 
-L.control.scale().addTo(map);
+L.control.scale({
+    imperial:false,
+    maxWidth: 200
+}).addTo(map);
 /* comment
 */
 let absatz = "Hi" /*Variable definiert*/
