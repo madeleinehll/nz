@@ -18,14 +18,12 @@ let circle = L.circle([lat,lng], {
 circle.bindPopup(`
      <strong> Hier ist Auckland </strong>
      <ul>
-        <li>Breite: ${lat}</li>
-        <li>Länge: ${lng}</li>
+        <li>Breite: ${lat.toFixed(1)}</li> 
+        <li>Länge: ${lng.toFixed(1)}</li>
      </ul>
 `).openPopup();
-// let popup = L.popup()
-//    .setLatLng([-36.833333, 174.8])
-//   .setContent("Hier liegt das Hobbition-Filmset.")
-//   .openOn(map);
+//.toFixed() = Nachkommastellen 
+
 let popup = L.popup();
 function onMapClick(e) {
     popup
